@@ -16,20 +16,39 @@ export var newsList = [
   "Marie Colvin shined a light on war-torn corners of the world",
 ];
 
-export function search() {
+export function search(value) {
   //inputValue is the variable that contains the search string
-  const inputValue = document.getElementById("search-input").value;
-
+  let inputValue = [];
+  if(value != null) {
+    inputValue = value;
+  }
+  else {
+    inputValue = document.getElementById("search-input").value;
+  }
+  let searchResults = [];
   //Write your code here for the search function
-
-  return newsList;
+  // write for loop for newslist to find if an input value is there.
+  for (let i = 0; i < newsList.length; i++) {
+    // console.log(i);
+    if(newsList[i].includes(inputValue)){
+      //  add that index to a new aaray.
+      searchResults.push(newsList[i]);
+    };
+  }
+  // if the input value is in that index, return those.
+  return searchResults;
 }
 
 export function sort(type) {
-  if (type == "ascending") {
+  if (type === "ascending") {
     //Write your code here for sorting (ascending)
+    newsList.sort();
+    console.log("Ascending")
   } else {
     //Write your code here for sorting (descending)
+    newsList.sort();
+    newsList.reverse();
+    console.log("Descending")
   }
 
   return newsList;
