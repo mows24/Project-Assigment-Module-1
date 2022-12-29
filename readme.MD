@@ -12,17 +12,28 @@ Congratulations! You have finished the whole Module 1. We will now test your ove
 npm install
 ```
 
-2. Open the index html file (index.html) on your desired browser.
-3. Write your codes in the main javascript file (main.js).
-4. Write your unit testing codes in the main test file (main.test.js).
-5. Add your repository by running the command:
+2. Install the "Live Server" extension on your VSCode.
+3. Open the project folder in your VSCode.
+4. Start the "Live Server". It should automatically start the web page on the browser.
+5. Write your codes in the main javascript file (main.js).
+6. Write your unit testing codes in the main test file (main.test.js).
+7. Add your repository by running the command:
 
 ```bash
 git add origin-project [Your Git URL]
 ```
 
-6. Push and commit the changes to your github repository
-7. Don't update any file except the main javascript and main test file.
+8. Push and commit the changes to your github repository
+9. Don't update any file except the main javascript and main test file.
+10. If you are running the test, you can replace the inputValue to your desired test search input:
+
+```javascript
+//You can comment this and change to a string (FOR TESTING)
+const inputValue = document.getElementById("search-input").value;
+
+//Like this
+const inputValue = "Sample news list";
+```
 
 ---
 
